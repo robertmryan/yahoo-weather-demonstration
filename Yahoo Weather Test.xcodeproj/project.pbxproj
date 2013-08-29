@@ -1,0 +1,305 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		839C989417CEE11100F18259 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 839C989317CEE11100F18259 /* UIKit.framework */; };
+		839C989617CEE11100F18259 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 839C989517CEE11100F18259 /* Foundation.framework */; };
+		839C989817CEE11100F18259 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 839C989717CEE11100F18259 /* CoreGraphics.framework */; };
+		839C989E17CEE11100F18259 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 839C989C17CEE11100F18259 /* InfoPlist.strings */; };
+		839C98A017CEE11100F18259 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 839C989F17CEE11100F18259 /* main.m */; };
+		839C98A417CEE11100F18259 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 839C98A317CEE11100F18259 /* AppDelegate.m */; };
+		839C98A617CEE11100F18259 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 839C98A517CEE11100F18259 /* Default.png */; };
+		839C98A817CEE11100F18259 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 839C98A717CEE11100F18259 /* Default@2x.png */; };
+		839C98AA17CEE11100F18259 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 839C98A917CEE11100F18259 /* Default-568h@2x.png */; };
+		839C98AD17CEE11100F18259 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 839C98AB17CEE11100F18259 /* MainStoryboard.storyboard */; };
+		839C98B017CEE11100F18259 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 839C98AF17CEE11100F18259 /* ViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		839C989017CEE11100F18259 /* Yahoo Weather Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yahoo Weather Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		839C989317CEE11100F18259 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		839C989517CEE11100F18259 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		839C989717CEE11100F18259 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		839C989B17CEE11100F18259 /* Yahoo Weather Test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Yahoo Weather Test-Info.plist"; sourceTree = "<group>"; };
+		839C989D17CEE11100F18259 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		839C989F17CEE11100F18259 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		839C98A117CEE11100F18259 /* Yahoo Weather Test-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Yahoo Weather Test-Prefix.pch"; sourceTree = "<group>"; };
+		839C98A217CEE11100F18259 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		839C98A317CEE11100F18259 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		839C98A517CEE11100F18259 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		839C98A717CEE11100F18259 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		839C98A917CEE11100F18259 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		839C98AC17CEE11100F18259 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		839C98AE17CEE11100F18259 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		839C98AF17CEE11100F18259 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		839C988D17CEE11100F18259 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				839C989417CEE11100F18259 /* UIKit.framework in Frameworks */,
+				839C989617CEE11100F18259 /* Foundation.framework in Frameworks */,
+				839C989817CEE11100F18259 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		839C988717CEE11100F18259 = {
+			isa = PBXGroup;
+			children = (
+				839C989917CEE11100F18259 /* Yahoo Weather Test */,
+				839C989217CEE11100F18259 /* Frameworks */,
+				839C989117CEE11100F18259 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		839C989117CEE11100F18259 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				839C989017CEE11100F18259 /* Yahoo Weather Test.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		839C989217CEE11100F18259 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				839C989317CEE11100F18259 /* UIKit.framework */,
+				839C989517CEE11100F18259 /* Foundation.framework */,
+				839C989717CEE11100F18259 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		839C989917CEE11100F18259 /* Yahoo Weather Test */ = {
+			isa = PBXGroup;
+			children = (
+				839C98A217CEE11100F18259 /* AppDelegate.h */,
+				839C98A317CEE11100F18259 /* AppDelegate.m */,
+				839C98AB17CEE11100F18259 /* MainStoryboard.storyboard */,
+				839C98AE17CEE11100F18259 /* ViewController.h */,
+				839C98AF17CEE11100F18259 /* ViewController.m */,
+				839C989A17CEE11100F18259 /* Supporting Files */,
+			);
+			path = "Yahoo Weather Test";
+			sourceTree = "<group>";
+		};
+		839C989A17CEE11100F18259 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				839C989B17CEE11100F18259 /* Yahoo Weather Test-Info.plist */,
+				839C989C17CEE11100F18259 /* InfoPlist.strings */,
+				839C989F17CEE11100F18259 /* main.m */,
+				839C98A117CEE11100F18259 /* Yahoo Weather Test-Prefix.pch */,
+				839C98A517CEE11100F18259 /* Default.png */,
+				839C98A717CEE11100F18259 /* Default@2x.png */,
+				839C98A917CEE11100F18259 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		839C988F17CEE11100F18259 /* Yahoo Weather Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 839C98B317CEE11100F18259 /* Build configuration list for PBXNativeTarget "Yahoo Weather Test" */;
+			buildPhases = (
+				839C988C17CEE11100F18259 /* Sources */,
+				839C988D17CEE11100F18259 /* Frameworks */,
+				839C988E17CEE11100F18259 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Yahoo Weather Test";
+			productName = "Yahoo Weather Test";
+			productReference = 839C989017CEE11100F18259 /* Yahoo Weather Test.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		839C988817CEE11100F18259 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Robert Ryan";
+			};
+			buildConfigurationList = 839C988B17CEE11100F18259 /* Build configuration list for PBXProject "Yahoo Weather Test" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 839C988717CEE11100F18259;
+			productRefGroup = 839C989117CEE11100F18259 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				839C988F17CEE11100F18259 /* Yahoo Weather Test */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		839C988E17CEE11100F18259 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				839C989E17CEE11100F18259 /* InfoPlist.strings in Resources */,
+				839C98A617CEE11100F18259 /* Default.png in Resources */,
+				839C98A817CEE11100F18259 /* Default@2x.png in Resources */,
+				839C98AA17CEE11100F18259 /* Default-568h@2x.png in Resources */,
+				839C98AD17CEE11100F18259 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		839C988C17CEE11100F18259 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				839C98A017CEE11100F18259 /* main.m in Sources */,
+				839C98A417CEE11100F18259 /* AppDelegate.m in Sources */,
+				839C98B017CEE11100F18259 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		839C989C17CEE11100F18259 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				839C989D17CEE11100F18259 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		839C98AB17CEE11100F18259 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				839C98AC17CEE11100F18259 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		839C98B117CEE11100F18259 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		839C98B217CEE11100F18259 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		839C98B417CEE11100F18259 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Yahoo Weather Test/Yahoo Weather Test-Prefix.pch";
+				INFOPLIST_FILE = "Yahoo Weather Test/Yahoo Weather Test-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		839C98B517CEE11100F18259 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Yahoo Weather Test/Yahoo Weather Test-Prefix.pch";
+				INFOPLIST_FILE = "Yahoo Weather Test/Yahoo Weather Test-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		839C988B17CEE11100F18259 /* Build configuration list for PBXProject "Yahoo Weather Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				839C98B117CEE11100F18259 /* Debug */,
+				839C98B217CEE11100F18259 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		839C98B317CEE11100F18259 /* Build configuration list for PBXNativeTarget "Yahoo Weather Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				839C98B417CEE11100F18259 /* Debug */,
+				839C98B517CEE11100F18259 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 839C988817CEE11100F18259 /* Project object */;
+}
