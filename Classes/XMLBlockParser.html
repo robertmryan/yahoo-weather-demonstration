@@ -1,0 +1,483 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>XMLBlockParser Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 858)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">Yahoo Weather Test </a></h1>
+				<a id="developerHome" href="../index.html">Rob Ryan</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">XMLBlockParser Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/beginElementBlock">&nbsp;&nbsp;&nbsp;&nbsp;beginElementBlock</option>
+	
+	<option value="//api/name/endElementBlock">&nbsp;&nbsp;&nbsp;&nbsp;endElementBlock</option>
+	
+	<option value="//api/name/errorBlock">&nbsp;&nbsp;&nbsp;&nbsp;errorBlock</option>
+	
+	
+	
+	
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Properties">Properties</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/beginElementBlock">beginElementBlock</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/endElementBlock">endElementBlock</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/errorBlock">errorBlock</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="XMLBlockParser Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">XMLBlockParser Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSXMLParser</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">XMLBlockParser.h<br />XMLBlockParser.m</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>A block-based rendition of NSXMLParser</p>
+
+<p>This is a block-based implementation of the NSXMLParser. The notion here is to abstract the implementation details
+of a parser unique to your particular XML file out of the <code>NSXMLParserDelegate</code> calls so that you have a parser
+that enjoys maximum reuse opportunities.</p>
+
+<p>The notion is that you</p>
+
+<ul>
+<li>create the <code>XMLBlockParser</code>;</li>
+<li>define either (or both) a <code>beginElementBlock</code> and an <code>endElementBlock</code>; and</li>
+<li>initiate the parsing.</li>
+</ul>
+
+
+<p>These two blocks return not just the element name, but rather an array of element names that
+represent the full nesting of the element tags. E.g., if you had an XML that looked like</p>
+
+<pre><code>&lt;items&gt;
+    &lt;item&gt;
+        &lt;name&gt;Item #1&lt;/name&gt;
+        &lt;url&gt;http://some.random.url/item1/index.html&lt;/url&gt;
+    &lt;/item&gt;
+    &lt;item&gt;
+        &lt;name&gt;Item #2&lt;/name&gt;
+        &lt;url&gt;http://some.random.url/item2/index.html&lt;/url&gt;
+    &lt;/item&gt;
+&lt;/items&gt;
+</code></pre>
+
+<p>When parsing the <code>name</code> element, the elementNames parameters would be <code>@[@"items", @"item", @"name"]</code>
+(e.g. indicating that the <code>name</code> element name was encountered within an <code>item</code> element, which itself
+was found inside an <code>items</code> element). This can be useful for disambiguating when a particular element name
+can be used in different contexts with the XML (e.g. it&rsquo;s not unusual to see a <code>link</code> or <code>image</code> element name
+that is use if different contexts within the same XML feed).</p>
+
+<h2>Usage</h2>
+
+<pre><code>XMLBlockParser *parser = [[XMLBlockParser alloc] initWithData:data];
+
+parser.beginElementBlock = ^(NSArray *elementNames, NSDictionary *attributeDict) {
+    NSString *elementName = [elementNames lastObject];
+
+    // Do here any parsing of the attributeDict values or other processing you want when you first encounter an element name
+};
+
+parser.endElementBlock = ^(NSArray *elementNames, NSString *value) {
+    NSString *elementName = [elementNames lastObject];
+
+    // Do here any parsing of the characters received between the starting element tag and the ending element tag
+};
+
+parser.errorBlock = ^(NSError *error) {
+    NSLog(@"%s: error: %@", __FUNCTION__, error);
+
+    // Do any addition error handling you want here
+};
+
+[parser parse];
+</code></pre>
+
+<h2>See also</h2>
+
+<ul>
+<li><a href="http://www.github.com/robertmryan/xmlblockparser">The XMLBlockParser project on github</a></li>
+</ul>
+<div class="warning"><p><strong>Warning:</strong> Note, do not set the <code>delegate</code> for this parser, as it is its own <code>NSXMLParserDelegate</code>.</p></div>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						<a title="Properties" name="task_Properties"></a>
+						
+<h3 class="subsubtitle task-title">Properties</h3>
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/beginElementBlock">&nbsp;&nbsp;beginElementBlock</a></code>
+		<span class="tooltip"><p>The block to be executed when the element begins</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/endElementBlock">&nbsp;&nbsp;endElementBlock</a></code>
+		<span class="tooltip"><p>The block to be executed when the element ends</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/errorBlock">&nbsp;&nbsp;errorBlock</a></code>
+		<span class="tooltip"><p>The block to be executed if error occurs</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/beginElementBlock" title="beginElementBlock"></a>
+	<h3 class="subsubtitle method-title">beginElementBlock</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The block to be executed when the element begins</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) XMLParserBeginElementBlock beginElementBlock</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This is used for the parsing of attributes that are encountered in <code>didStartElement</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">XMLBlockParser.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/endElementBlock" title="endElementBlock"></a>
+	<h3 class="subsubtitle method-title">endElementBlock</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The block to be executed when the element ends</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) XMLParserEndElementBlock endElementBlock</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This is used for the parsing of the characters received by <code>foundCharacters</code>, namely
+those characters received after <code>didStartElement</code> but before <code>didEndElement</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">XMLBlockParser.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/errorBlock" title="errorBlock"></a>
+	<h3 class="subsubtitle method-title">errorBlock</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The block to be executed if error occurs</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) XMLParserErrorBlock errorBlock</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This is used to handle any parser errors returned.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">XMLBlockParser.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 Rob Ryan. All rights reserved. (Last updated: 2013-08-29)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>
